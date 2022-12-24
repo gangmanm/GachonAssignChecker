@@ -1,0 +1,15 @@
+.nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+        
+
+.body {
+    background-color: #e78e52;
+}
