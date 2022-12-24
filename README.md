@@ -15,6 +15,13 @@ home.html에 넘겨준다.
 home.html에서
 python template 코드를 이용하여 , for loop를 돌며 코스별로 tab을 생성
 tab안에는 과제리스트를 생성하고, badge를 통해 색깔별로 중요 포인트를 준다. 
+
+
+마지막으로 Heroku 를 이용해 배포하였다. 
+https://gachonassign.herokuapp.com
+
+<img width="473" alt="스크린샷 2022-12-25 오전 4 03 02" src="https://user-images.githubusercontent.com/97601109/209448410-e2de56e9-239a-435e-b5dc-a5ec28499309.png">
+
 [결과창] 
 
 <img width="567" alt="스크린샷 2022-12-25 오전 12 13 15" src="https://user-images.githubusercontent.com/97601109/209448356-fc76f6e9-e660-4bf5-a1a2-994f1e717264.png">
