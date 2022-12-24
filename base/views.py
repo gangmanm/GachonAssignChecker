@@ -76,8 +76,6 @@ def assign_hey(user_id, user_password):
             for link in soup2:
 
                 if len(link['href']) > 0:
-                    print(class_title[count])
-                    print(link['href'])
                     assign_link[class_title[count]] = link['href']
 
             count += 1
@@ -130,5 +128,4 @@ def assign_hey(user_id, user_password):
                 count4 += 1
             assign_final[count_course] = arr[:count1]
             count_course += 1
-        print(assign_final)
         return assign_final, list_key
