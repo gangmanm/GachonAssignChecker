@@ -9,11 +9,13 @@ user_id = ""
 user_password = ""
 
 
+assign_final = {}
 # Array 생성
 class_title = []
 course_link = []
 assign_link = {}
 assign_list = {}
+list_key = []
 
 
 cols = 5
@@ -24,15 +26,24 @@ dt1 = datetime.now()
 
 def home(request):
     if request.method == 'GET':
+        assign_final = {}
         user_id = request.GET.get('username'),  # .POST['title'],
         user_password = request.GET.get('password'),
         assign_final = assign_hey(user_id, user_password)
         return render(request, 'base/home.html', {'assign': assign_final[0], 'course_title': assign_final[1], 'course_range': len(assign_final[1])})
-
-    return render(request, 'base/home.html', {'assign': {}, 'course_title': [], 'course_range': 0})
+    else:
+        assign_final ={}
+        return render(request, 'base/home.html', {'assign': assign_final[0], 'course_title': assign_final[1], 'course_range': 0})
 
 
 def assign_hey(user_id, user_password):
+    ist_key = []
+    assign_final = {}
+    # Array 생성
+    class_title = []
+    course_link = []
+    assign_link = {}
+    assign_list = {}
     # Create your views here.
     loginurl = ('https://cyber.gachon.ac.kr/login/index.php')
     secureurl = ('https://cyber.gachon.ac.kr/')
