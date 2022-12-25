@@ -1,15 +1,11 @@
-.nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+body {
+    background-color: rgb(255, 255, 255)
+ }
 
-.box {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-}
-        
-
-.body {
-    background-color: #e78e52;
+ .container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-basis: auto;
+   background-color: rgb(62, 68, 131);
 }

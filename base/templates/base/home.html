@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css"  href="{% static 'styles/main.css' %}">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   
     <script src="{% static 'styles/script.js' %}"></script>   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"  href="{% static 'styles/main.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
@@ -26,18 +27,19 @@
     </style> 
 </head>
 <body>
-    <h1 class="p-2 mb-1 text-center text-secondary"> Gachon Assignment Checker </h1>
-        <form method=”GET”> 
-            <div>
-                <label for="username" class="p-1 mb-2 bg-primary text-white">Username:</label>
-                <input type="text" id="username" name="username">
-                <label for="password" class="p-1 mb-2 bg-primary text-white">Password:</label>
-                <input type="password" id="pass" name="password">
+    <h1 class="p-2 mb-1 text-center text-primary"> Gachon Assignment Checker </h1>
+    <form method=”GET”> 
+        <div class="d-flex justify-content-center">
+        <div class="d-inline-flex pl-3 pr-3 mb-2 bd-highlight badge-warning" >
+            <!--<label for="username" class="p-1 mb-2 bg-primary text-white">Username:</label> -->
+            <input class="mt-3 mb-3 mr-1 ml-1" type="text" id="username" name="username" placeholder="Enter your ID">
+         <!--  <label for="password" class="p-1 mb-2 bg-primary text-white">Password:</label>-->
+            <input class="mt-3 mb-3 mr-2 "type="password" id="pass" name="password" placeholder="Enter your Password">
+        <input class="mt-3 mb-3 mr-10" type="submit" value="Login">
+        </div>
+        </div>
         
-            <input type="submit" value="Sign in">
-            </div>
-            
-        </form> 
+    </form> 
     <script>
         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var target = $(e.target).attr("href") // activated tab
