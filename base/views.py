@@ -32,7 +32,7 @@ def home(request):
         assign_final = assign_hey(user_id, user_password)
         return render(request, 'base/home.html', {'assign': assign_final[0], 'course_title': assign_final[1], 'course_range': len(assign_final[1])})
     else:
-        assign_final ={}
+        assign_final = {}
         return render(request, 'base/home.html', {'assign': assign_final[0], 'course_title': assign_final[1], 'course_range': 0})
 
 
@@ -87,6 +87,12 @@ def assign_hey(user_id, user_password):
             for link in soup2:
 
                 if len(link['href']) > 0:
+                    assign_link[class_title[count]] = link['href']
+            soup3 = soup.findAll('a', href=True, text='과제')
+            for link in soup3:
+                if len(link['href']) >= 0:
+                    print(class_title[count])
+                    print(link['href'])
                     assign_link[class_title[count]] = link['href']
 
             count += 1
