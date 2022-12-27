@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+    <!-- 애드 센스 광고 영역 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4209043687585263"
+    crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   
     <script src="{% static 'styles/script.js' %}"></script>   
@@ -15,9 +20,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <!-- 애드 센스 광고 영역 -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4209043687585263"
-     crossorigin="anonymous"></script>
 
      
     <title>Gachon Assignment Checker</title>
@@ -27,21 +29,24 @@
     </style> 
 </head>
 <body>
-    <div class="flex-container">
+       <div class="flex-container">
         <span class="badge badge-primary badge-pil mt-2 mb-2 title">Gachon Assignment Checker</span>
         </div>
             <form method=”GET”> 
-                <div class="d-inline-flex pl-3 pr-3 mb-2 bd-highlight badge-warning" >
-                    <!--<label for="username" class="p-1 mb-2 bg-primary text-white">Username:</label> -->
-                    <input class="mt-3 mb-3 mr-1 ml-1" type="text" id="username" name="username" placeholder="Enter your ID">
-                 <!--  <label for="password" class="p-1 mb-2 bg-primary text-white">Password:</label>-->
-                    <input class="mt-3 mb-3 mr-2 "type="password" id="pass" name="password" placeholder="Enter your Password">
-                <input class="mt-3 mb-3 mr-10" type="submit" value="Login">
+                <div class="flex-container mb-2">
+                <div class="bd-highlight badge-warning" >
+                    <div class="d-flex">
+                    <label for="username" class="p-1 m-1 badge-danger badge-pil text-white">Username:</label>
+                    <input class="mt-1 mr-1 ml-1" type="text" id="username" name="username" placeholder="Enter your ID">
+                    </div>
+                     
+                    <label for="password" class="p-1 m-1 badge-danger badge-pil text-white">Password:</label>
+                    <input class="mt-1 ml-1 mr-2 "type="password" id="pass" name="password" placeholder="Enter your Password">
+                    <input class="pt-1 mb-1 mr-1" type="submit" value="Login">
                 </div>
+               </div>
                 
             </form> 
-        
-    </form> 
     <script>
         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var target = $(e.target).attr("href") // activated tab
