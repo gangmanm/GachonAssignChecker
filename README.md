@@ -25,3 +25,6 @@ https://gachonassign.herokuapp.com
 [결과창] 
 
 <img width="567" alt="스크린샷 2022-12-25 오전 12 13 15" src="https://user-images.githubusercontent.com/97601109/209448356-fc76f6e9-e660-4bf5-a1a2-994f1e717264.png">
+
+[ 사이버 영상 진행도 확인란 추가]
+<img width="991" alt="스크린샷 2023-01-27 오전 3 00 37" src="https://user-images.githubusercontent.com/97601109/216595791-015b8a4e-6f93-47d3-a557-d1f46b6147f9.png">
