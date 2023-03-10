@@ -72,7 +72,7 @@ def assign_hey(user_id, user_password):
     for classes in mydivs:
         class_title_text = classes.h3.text.strip()
         class_title.append(class_title_text)
-    # class_title = ['메타버스 vr/ar', 'p실무', '컴퓨터 구조',
+    #class_title = ['메타버스 vr/ar', 'p실무', '컴퓨터 구조',
      #             '드론과 로봇틱스', '컴퓨터그래픽스', '폭력예방교육']
     # 링크 soup에서 link만 찾아서 집어넣기
     for link in links:
@@ -134,14 +134,7 @@ def assign_hey(user_id, user_password):
                     dt2 = datetime(int(ymd[0]), int(
                         ymd[1]), int(ymd[2]), int(dt[0]), int(dt[1]))
                     result = dt1 - dt2
-                    result_txt = ""
-                    if result.days >= 0:
-                        result_txt = "overdue +" + \
-                            str(result.days)+" day " + \
-                            str(int(result.seconds/3600))+" hour"
-                    else:
-                        result_txt = str(-result.days)+" day " + \
-                            str(int(result.seconds/3600))+" hour left"
+                    result_txt = dt2
                     arr[count2][1] = result_txt
                     count2 += 1
                 cell_c3 = soup.findAll('td', {"class": "cell c3"})
@@ -167,13 +160,14 @@ def assign_hey(user_id, user_password):
 
 def mooc_hey(user_id, user_password):
 
+  
     # Create your views here.
     loginurl = ('https://cyber.gachon.ac.kr/login/index.php')
     secureurl = ('https://cyber.gachon.ac.kr/')
 
     userid = user_id
     userpass = user_password
-
+    
     payload = {
         'username': userid,
         'password': userpass,
@@ -195,15 +189,15 @@ def mooc_hey(user_id, user_password):
     for classes in mydivs:
         class_title_text = classes.h3.text.strip()
         class_title.append(class_title_text)
-    # class_title = ['메타버스 vr/ar', 'p실무', '컴퓨터 구조',
+    #class_title = ['메타버스 vr/ar', 'p실무', '컴퓨터 구조',
      #              '드론과 로봇틱스', '컴퓨터그래픽스', '폭력예방교육']
     # 링크 soup에서 link만 찾아서 집어넣기
     for link in links:
         # print(link['href'])
         course_link.append(link['href'])
 
-    # course_link = ['https://cyber.gachon.ac.kr/course/view.php?id=82533', 'https://cyber.gachon.ac.kr/course/view.php?id=82636', 'https://cyber.gachon.ac.kr/course/view.php?id=83046',
-        #  'https://cyber.gachon.ac.kr/course/view.php?id=83951', 'https://cyber.gachon.ac.kr/course/view.php?id=83200', 'https://cyber.gachon.ac.kr/course/view.php?id=73208']
+    #course_link = ['https://cyber.gachon.ac.kr/course/view.php?id=82533', 'https://cyber.gachon.ac.kr/course/view.php?id=82636', 'https://cyber.gachon.ac.kr/course/view.php?id=83046',
+              #  'https://cyber.gachon.ac.kr/course/view.php?id=83951', 'https://cyber.gachon.ac.kr/course/view.php?id=83200', 'https://cyber.gachon.ac.kr/course/view.php?id=73208']
 
     count = 0
     assign_link = {}
@@ -294,14 +288,7 @@ def mooc_hey(user_id, user_password):
                         dt2 = datetime(int(ymd[0]), int(
                             ymd[1]), int(ymd[2]), int(dt[0]), int(dt[1]))
                         result = dt1 - dt2
-                        result_txt = ""
-                        if result.days >= 0:
-                            result_txt = "overdue +" + \
-                                str(result.days)+" day " + \
-                                str(int(result.seconds/3600))+" hour"
-                        else:
-                            result_txt = str(-result.days)+" day " + \
-                                str(int(result.seconds/3600))+" hour left"
+                        result_txt = dt2
                         mooc_dt.append(row['title'])
                         mooc_left_dt.append(result_txt)
                         mooc_count3 += 1
@@ -356,3 +343,4 @@ def mooc_hey(user_id, user_password):
 
 def list_chunk(lst, n):
     return [lst[i:i+n] for i in range(0, len(lst), n)]
+ 
